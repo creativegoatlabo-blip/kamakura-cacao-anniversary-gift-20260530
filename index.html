@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>鎌倉アニバーサリーギフト企画書 | 鎌倉彫金工房 × MAISON CACAO</title>
+    <meta
+      name="description"
+      content="鎌倉彫金工房のペアリング制作体験チケットとMAISON CACAOのチョコレートギフトを組み合わせた共同販売企画。"
+    >
+    <style>
+      /* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V4 */
+      :root {
+        --color-paper: #fbfaf6;
+        --color-paper-strong: #ffffff;
+        --color-ink: #231d19;
+        --color-muted: #6a625b;
+        --color-cocoa: #43251d;
+        --color-cacao-soft: #e5d2c2;
+        --color-cacao-wash: #f2e6db;
+        --color-gold: #b78948;
+        --color-silver: #9da4a6;
+        --color-jade: #2f6f63;
+        --color-jade-soft: #dceae4;
+        --color-rose: #a95d58;
+        --color-line: #ddd4ca;
+        --color-shadow: rgba(46, 32, 24, 0.12);
+        --font-display: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+        --font-body: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --max: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-width: 0;
+        overflow-x: clip;
+        background: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-body);
+        line-height: 1.75;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      img,
+      svg {
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+      }
+
+      .page {
+        width: 100%;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 88svh;
+        display: grid;
+        align-items: end;
+        isolation: isolate;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(35, 29, 25, 0.12), rgba(35, 29, 25, 0.72)),
+          radial-gradient(circle at 74% 18%, var(--color-cacao-wash) 0, transparent 32%),
+          linear-gradient(135deg, var(--color-paper) 0%, var(--color-cacao-soft) 47%, var(--color-cocoa) 100%);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        opacity: 0.86;
+        background-image:
+          linear-gradient(110deg, transparent 0 43%, rgba(255, 255, 255, 0.22) 43% 45%, transparent 45% 100%),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 18px);
+      }
+
+      .hero-visual {
+        position: absolute;
+        z-index: -1;
+        right: clamp(-5rem, 4vw, 2rem);
+        top: clamp(3rem, 8vw, 7rem);
+        width: min(64vw, 720px);
+        min-width: 320px;
+        filter: drop-shadow(0 28px 58px var(--color-shadow));
+      }
+
+      .hero-inner {
+        width: min(100% - 2rem, var(--max));
+        margin-inline: auto;
+        padding: var(--space-8) 0 var(--space-10);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-3);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 999px;
+        color: var(--color-paper-strong);
+        background: rgba(35, 29, 25, 0.28);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 999px;
+        background: var(--color-gold);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+      }
+
+      h1 {
+        max-width: 11ch;
+        margin-top: var(--space-5);
+        color: var(--color-paper-strong);
+        font-size: clamp(2.55rem, 8vw, 6.2rem);
+        line-height: 1.04;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+        margin: var(--space-5) 0 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: clamp(1rem, 2vw, 1.22rem);
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+      }
+
+      .meta-chip {
+        display: inline-flex;
+        min-height: 2.5rem;
+        align-items: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        padding: 0 var(--space-4);
+        color: var(--color-paper-strong);
+        background: rgba(255, 255, 255, 0.12);
+        font-size: 0.88rem;
+        white-space: nowrap;
+      }
+
+      .top-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--color-line);
+        background: rgba(251, 250, 246, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .top-nav-inner {
+        width: min(100% - 2rem, var(--max));
+        margin-inline: auto;
+        display: flex;
+        gap: var(--space-2);
+        align-items: center;
+        justify-content: space-between;
+        min-height: 3.75rem;
+      }
+
+      .nav-brand {
+        font-family: var(--font-display);
+        font-size: 0.98rem;
+        line-height: 1.3;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: var(--space-2);
+      }
+
+      .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.25rem;
+        padding: 0 var(--space-3);
+        border-radius: 999px;
+        color: var(--color-muted);
+        font-size: 0.86rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--color-ink);
+        background: var(--color-jade-soft);
+        outline: none;
+      }
+
+      section {
+        padding: var(--space-16) 0;
+      }
+
+      .band {
+        background: var(--color-paper-strong);
+        border-block: 1px solid var(--color-line);
+      }
+
+      .container {
+        width: min(100% - 2rem, var(--max));
+        margin-inline: auto;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+        gap: var(--space-8);
+        align-items: end;
+        margin-bottom: var(--space-8);
+      }
+
+      .section-kicker {
+        margin: 0 0 var(--space-3);
+        color: var(--color-jade);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: clamp(1.85rem, 4vw, 3rem);
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: clamp(1rem, 2vw, 1.12rem);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .summary-item,
+      .product-card,
+      .benefit-card,
+      .flow-step,
+      .rule-card,
+      .kpi-card {
+        min-width: 0;
+        border: 1px solid var(--color-line);
+        border-radius: var(--radius-md);
+        background: var(--color-paper-strong);
+        box-shadow: 0 16px 40px var(--color-shadow);
+      }
+
+      .summary-item {
+        padding: var(--space-5);
+      }
+
+      .summary-number {
+        display: block;
+        color: var(--color-gold);
+        font-family: var(--font-display);
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+
+      .summary-item h3 {
+        margin-top: var(--space-4);
+        font-size: 1.15rem;
+      }
+
+      .summary-item p,
+      .product-card p,
+      .benefit-card p,
+      .flow-step p,
+      .rule-card p,
+      .kpi-card p {
+        margin: var(--space-3) 0 0;
+        color: var(--color-muted);
+        font-size: 0.95rem;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-5);
+      }
+
+      .product-card {
+        position: relative;
+        overflow: hidden;
+        padding: var(--space-6);
+      }
+
+      .product-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.38rem;
+        background: var(--product-accent, var(--color-gold));
+      }
+
+      .product-card.k10 {
+        --product-accent: var(--color-gold);
+      }
+
+      .product-card.silver {
+        --product-accent: var(--color-silver);
+      }
+
+      .product-label {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2rem;
+        border-radius: 999px;
+        background: var(--color-cacao-wash);
+        color: var(--color-cocoa);
+        padding: 0 var(--space-3);
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .product-card h3 {
+        margin-top: var(--space-5);
+        font-size: clamp(1.45rem, 3vw, 2rem);
+      }
+
+      .price-box {
+        display: grid;
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+        padding: var(--space-4);
+        border-radius: var(--radius-sm);
+        background: var(--color-paper);
+      }
+
+      .price-row {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-4);
+        border-bottom: 1px solid var(--color-line);
+        padding-bottom: var(--space-3);
+      }
+
+      .price-row:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .price-row span:first-child {
+        color: var(--color-muted);
+      }
+
+      .price-row strong {
+        color: var(--color-ink);
+        text-align: right;
+      }
+
+      .note {
+        margin-top: var(--space-4);
+        color: var(--color-muted);
+        font-size: 0.88rem;
+      }
+
+      .proposal-strip {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: var(--space-8);
+        align-items: center;
+        border-radius: var(--radius-lg);
+        padding: var(--space-8);
+        background:
+          linear-gradient(120deg, var(--color-cocoa), #2c3d38 68%, var(--color-jade));
+        color: var(--color-paper-strong);
+      }
+
+      .proposal-strip h2 {
+        color: var(--color-paper-strong);
+      }
+
+      .proposal-strip p {
+        margin: var(--space-4) 0 0;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .mini-list {
+        display: grid;
+        gap: var(--space-3);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .mini-list li {
+        display: grid;
+        grid-template-columns: 1.6rem minmax(0, 1fr);
+        gap: var(--space-3);
+        align-items: start;
+      }
+
+      .mini-list li::before {
+        content: "";
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-top: 0.58rem;
+        border-radius: 999px;
+        background: var(--color-gold);
+      }
+
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-5);
+      }
+
+      .benefit-card {
+        padding: var(--space-6);
+      }
+
+      .benefit-card h3 {
+        font-size: 1.38rem;
+      }
+
+      .benefit-card ul,
+      .rule-card ul {
+        display: grid;
+        gap: var(--space-3);
+        margin: var(--space-5) 0 0;
+        padding-left: 1.2rem;
+        color: var(--color-muted);
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .flow-step {
+        padding: var(--space-5);
+      }
+
+      .flow-index {
+        display: inline-flex;
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: var(--color-jade);
+        color: var(--color-paper-strong);
+        font-weight: 700;
+      }
+
+      .flow-step h3 {
+        margin-top: var(--space-4);
+        font-size: 1.08rem;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: var(--space-5);
+      }
+
+      .rule-card,
+      .kpi-card {
+        padding: var(--space-5);
+      }
+
+      .rule-card h3,
+      .kpi-card h3 {
+        font-size: 1.15rem;
+      }
+
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .kpi-card {
+        min-height: 9rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: var(--space-4);
+        counter-reset: timeline;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 5rem minmax(0, 1fr);
+        gap: var(--space-4);
+        align-items: start;
+        padding: var(--space-5) 0;
+        border-top: 1px solid var(--color-line);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: 1px solid var(--color-line);
+      }
+
+      .timeline-term {
+        color: var(--color-jade);
+        font-weight: 700;
+      }
+
+      .timeline-item h3 {
+        font-size: 1.15rem;
+      }
+
+      .timeline-item p {
+        margin: var(--space-2) 0 0;
+        color: var(--color-muted);
+      }
+
+      .closing {
+        padding: var(--space-12) 0;
+        background: var(--color-cocoa);
+        color: var(--color-paper-strong);
+      }
+
+      .closing .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: var(--space-8);
+        align-items: center;
+      }
+
+      .closing h2 {
+        color: var(--color-paper-strong);
+      }
+
+      .closing p {
+        margin: var(--space-4) 0 0;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .decision-box {
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        background: rgba(255, 255, 255, 0.08);
+        padding: var(--space-5);
+      }
+
+      .decision-box ul {
+        display: grid;
+        gap: var(--space-3);
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      footer {
+        padding: var(--space-8) 0;
+        color: var(--color-muted);
+        font-size: 0.84rem;
+      }
+
+      footer .container {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      @media (max-width: 860px) {
+        .hero {
+          min-height: 92svh;
+        }
+
+        .hero-visual {
+          right: -9rem;
+          top: 2.25rem;
+          width: 760px;
+          opacity: 0.66;
+        }
+
+        .top-nav-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: var(--space-2);
+          padding: var(--space-3) 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          overflow-x: auto;
+          padding-bottom: var(--space-1);
+        }
+
+        .section-head,
+        .proposal-strip,
+        .closing .container {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-grid,
+        .kpi-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-grid,
+        .benefit-grid,
+        .two-column {
+          grid-template-columns: 1fr;
+        }
+
+        .flow {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero-inner {
+          padding-bottom: var(--space-8);
+        }
+
+        .hero-copy {
+          font-size: 0.98rem;
+        }
+
+        .meta-chip {
+          min-height: 2.25rem;
+          font-size: 0.78rem;
+        }
+
+        section {
+          padding: var(--space-12) 0;
+        }
+
+        .flow {
+          grid-template-columns: 1fr;
+        }
+
+        .proposal-strip {
+          padding: var(--space-5);
+        }
+
+        .product-card,
+        .benefit-card,
+        .rule-card,
+        .kpi-card,
+        .summary-item,
+        .flow-step {
+          padding: var(--space-5);
+        }
+
+        .price-row {
+          display: grid;
+          gap: var(--space-1);
+        }
+
+        .price-row strong {
+          text-align: left;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: var(--space-2);
+        }
+      }
+
+      @media print {
+        .top-nav {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        section {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <svg class="hero-visual" viewBox="0 0 820 560" role="img" aria-label="指輪とチョコレートのギフトを表すビジュアル">
+          <defs>
+            <linearGradient id="gold-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--color-paper-strong)"></stop>
+              <stop offset="45%" stop-color="var(--color-gold)"></stop>
+              <stop offset="100%" stop-color="var(--color-cocoa)"></stop>
+            </linearGradient>
+            <linearGradient id="silver-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--color-paper-strong)"></stop>
+              <stop offset="50%" stop-color="var(--color-silver)"></stop>
+              <stop offset="100%" stop-color="var(--color-cocoa)"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="150" y="78" width="520" height="370" rx="24" fill="var(--color-paper)" opacity="0.82"></rect>
+          <rect x="214" y="146" width="392" height="226" rx="18" fill="var(--color-cacao-wash)" opacity="0.92"></rect>
+          <circle cx="330" cy="270" r="86" fill="none" stroke="url(#gold-ring)" stroke-width="30"></circle>
+          <circle cx="438" cy="272" r="78" fill="none" stroke="url(#silver-ring)" stroke-width="28"></circle>
+          <rect x="486" y="154" width="86" height="86" rx="16" fill="var(--color-cocoa)"></rect>
+          <rect x="486" y="258" width="86" height="86" rx="16" fill="var(--color-rose)"></rect>
+          <rect x="382" y="154" width="86" height="86" rx="16" fill="var(--color-jade)"></rect>
+          <path d="M190 408 C278 374, 360 408, 442 385 C520 363, 584 385, 638 354" fill="none" stroke="var(--color-gold)" stroke-width="6" stroke-linecap="round" opacity="0.68"></path>
+        </svg>
+
+        <div class="hero-inner">
+          <span class="eyebrow">Proposal / Kamakura Anniversary Gift</span>
+          <h1>鎌倉アニバーサリーギフト</h1>
+          <p class="hero-copy">
+            鎌倉彫金工房のペアリング制作体験チケットと、MAISON CACAOのチョコレートギフトを組み合わせる共同販売企画。
+            「チョコレートを贈る日」を、ふたりで鎌倉に戻る記念日に変えます。
+          </p>
+          <div class="hero-meta" aria-label="企画の要点">
+            <span class="meta-chip">K10 / Silverの2 SKU</span>
+            <span class="meta-chip">通常合計より10%お得</span>
+            <span class="meta-chip">両社EC・メルマガで販売</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="top-nav" aria-label="ページ内メニュー">
+        <div class="top-nav-inner">
+          <div class="nav-brand">鎌倉彫金工房 × MAISON CACAO</div>
+          <div class="nav-links">
+            <a href="#concept">企画意図</a>
+            <a href="#products">商品設計</a>
+            <a href="#merit">双方メリット</a>
+            <a href="#operation">運用案</a>
+          </div>
+        </div>
+      </nav>
+
+      <section id="concept">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Concept</p>
+              <h2>ものを贈るだけでなく、鎌倉で過ごす時間まで贈る。</h2>
+            </div>
+            <p class="lead">
+              MAISON CACAOの顧客には「上質なギフトを選ぶ」動機があります。そこに鎌倉彫金工房の制作体験を添えることで、記念日ギフトが一度きりの消費ではなく、鎌倉への来訪とふたりの思い出になります。
+            </p>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-item">
+              <span class="summary-number">01</span>
+              <h3>ギフト単価を上げやすい</h3>
+              <p>チョコレート単体では届きにくい価格帯に、制作体験を組み合わせて自然に到達できます。</p>
+            </article>
+            <article class="summary-item">
+              <span class="summary-number">02</span>
+              <h3>鎌倉来訪の理由になる</h3>
+              <p>購入後に体験予約が生まれるため、オンライン販売から鎌倉の実店舗体験へつなげられます。</p>
+            </article>
+            <article class="summary-item">
+              <span class="summary-number">03</span>
+              <h3>両社が自社顧客へ売れる</h3>
+              <p>メゾンカカオ側、鎌倉彫金工房側の両方で販売でき、片側だけが送客する構図になりません。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="band">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Product Design</p>
+              <h2>初回はK10とSilverの2種類に絞る。</h2>
+            </div>
+            <p class="lead">
+              ダイヤやプラチナを含めると単価・説明・差額精算が重くなります。初回は「贈りやすく、理解しやすく、予約運用しやすい」2 SKUでテストします。
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card k10">
+              <span class="product-label">大人の記念日向け</span>
+              <h3>K10ペアリング制作体験セット</h3>
+              <p>
+                K10ペアリング制作体験チケット2名分に、MAISON CACAOのチョコレートギフトを組み合わせます。結婚記念日、誕生日、交際記念日など、少し特別な贈り物向け。
+              </p>
+              <div class="price-box" aria-label="K10セットの価格設計">
+                <div class="price-row">
+                  <span>構成</span>
+                  <strong>K10ペアリング2本 + チョコレート</strong>
+                </div>
+                <div class="price-row">
+                  <span>販売価格</span>
+                  <strong>通常合計から10%OFF</strong>
+                </div>
+                <div class="price-row">
+                  <span>当日精算</span>
+                  <strong>幅変更・石留め等は別途</strong>
+                </div>
+              </div>
+              <p class="note">
+                表示価格は、採用するチョコレートギフトとリング仕様を確定後に決定します。
+              </p>
+            </article>
+
+            <article class="product-card silver">
+              <span class="product-label">鎌倉デートギフト向け</span>
+              <h3>Silverペアリング制作体験セット</h3>
+              <p>
+                Silverペアリング制作体験チケット2名分に、MAISON CACAOのチョコレートギフトを組み合わせます。若いカップルや、気軽な記念日のプレゼントに合う入口商品。
+              </p>
+              <div class="price-box" aria-label="Silverセットの価格設計">
+                <div class="price-row">
+                  <span>構成</span>
+                  <strong>Silverペアリング2本 + チョコレート</strong>
+                </div>
+                <div class="price-row">
+                  <span>販売価格</span>
+                  <strong>通常合計から10%OFF</strong>
+                </div>
+                <div class="price-row">
+                  <span>当日精算</span>
+                  <strong>基準幅以外・オプションは別途</strong>
+                </div>
+              </div>
+              <p class="note">
+                初回は基準幅を設定し、購入ページで対象範囲を明確にします。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="proposal-strip">
+            <div>
+              <p class="section-kicker">Customer Promise</p>
+              <h2>チョコレートと、ふたりで作る指輪を贈る。</h2>
+            </div>
+            <ul class="mini-list">
+              <li>購入者は、チョコレートギフトと制作体験チケットをまとめて贈れる。</li>
+              <li>受け取った人は、好きな日程で鎌倉彫金工房の制作体験を予約できる。</li>
+              <li>体験当日または前後に、鎌倉でMAISON CACAOに触れる導線を作れる。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="merit" class="band">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Mutual Value</p>
+              <h2>双方に売上と認知の理由がある。</h2>
+            </div>
+            <p class="lead">
+              片方の顧客をもう片方へ送るだけではなく、両社が自社商品として語れる共同ギフトにします。
+            </p>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <h3>MAISON CACAO側のメリット</h3>
+              <ul>
+                <li>チョコレートギフトに「鎌倉で過ごす記念日」という体験価値を上乗せできる。</li>
+                <li>メルマガ・ECで、高単価な記念日ギフトとして提案できる。</li>
+                <li>鎌倉ブランドの文脈が強まり、店舗来訪や再購入の理由を作れる。</li>
+                <li>限定数量の共同企画としてニュース性を出しやすい。</li>
+              </ul>
+            </article>
+
+            <article class="benefit-card">
+              <h3>鎌倉彫金工房側のメリット</h3>
+              <ul>
+                <li>MAISON CACAOのギフト顧客へ、自然な記念日文脈で認知できる。</li>
+                <li>ペアリング制作体験の新規予約を獲得できる。</li>
+                <li>自社ECでもチョコレート付きギフトとして販売でき、既存顧客の再接点になる。</li>
+                <li>結婚指輪以外のアニバーサリー需要を広げられる。</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="operation">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Operation</p>
+              <h2>販売は両社EC、体験は予約コードで管理。</h2>
+            </div>
+            <p class="lead">
+              個人情報を相互に渡す前提にはせず、購入元ごとに販売・配送・チケット発行を管理します。成果は専用URLとコードで集計します。
+            </p>
+          </div>
+
+          <div class="flow">
+            <article class="flow-step">
+              <span class="flow-index">1</span>
+              <h3>購入</h3>
+              <p>メゾンカカオEC、鎌倉彫金工房ECの両方で販売します。</p>
+            </article>
+            <article class="flow-step">
+              <span class="flow-index">2</span>
+              <h3>ギフト配送</h3>
+              <p>チョコレートはメゾンカカオ側の通常配送またはeギフト導線を活用します。</p>
+            </article>
+            <article class="flow-step">
+              <span class="flow-index">3</span>
+              <h3>チケット発行</h3>
+              <p>制作体験チケットはメールまたは同梱カードで専用コードを発行します。</p>
+            </article>
+            <article class="flow-step">
+              <span class="flow-index">4</span>
+              <h3>体験予約</h3>
+              <p>受け取った人が専用URLから来店日時を予約し、当日コードを提示します。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Pilot Plan</p>
+              <h2>初回は数量限定で、反応を見る。</h2>
+            </div>
+            <p class="lead">
+              まずは1か月の販売テストとして、商品理解・予約転換・差額精算の不満有無を確認します。
+            </p>
+          </div>
+
+          <div class="two-column">
+            <article class="rule-card">
+              <h3>初回販売案</h3>
+              <ul>
+                <li>K10セット: 30セット限定</li>
+                <li>Silverセット: 50セット限定</li>
+                <li>販売期間: 4週間</li>
+                <li>利用期限: 購入日から6か月以内</li>
+                <li>告知: 両社メルマガ、EC、鎌倉店舗カード、Instagram投稿</li>
+              </ul>
+            </article>
+
+            <article class="rule-card">
+              <h3>ページ上で明記すること</h3>
+              <ul>
+                <li>対象はK10またはSilverのペアリング制作体験のみ</li>
+                <li>基準仕様からの変更、石留め、刻印、ケース等は別途精算</li>
+                <li>チョコレート配送後のキャンセル条件</li>
+                <li>予約枠には限りがあること</li>
+                <li>チケットの換金不可・有効期限</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Measurement</p>
+              <h2>売上だけでなく、次回化できるかを見る。</h2>
+            </div>
+            <p class="lead">
+              初回の目的は大きな売上ではなく、共同商品として継続できるかの検証です。
+            </p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card">
+              <h3>販売指標</h3>
+              <p>SKU別販売数、購入元、平均単価、10%OFFによる反応。</p>
+            </article>
+            <article class="kpi-card">
+              <h3>送客指標</h3>
+              <p>メルマガクリック、共同LP閲覧、予約ページ遷移、店頭QR流入。</p>
+            </article>
+            <article class="kpi-card">
+              <h3>体験指標</h3>
+              <p>予約率、来店率、当日差額精算、問い合わせ内容、満足度。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Schedule</p>
+              <h2>合意後、約1か月で販売開始を目指す。</h2>
+            </div>
+            <p class="lead">
+              既存商品と既存ECを活用するため、商品開発よりも、条件整理と販売ページ制作が中心です。
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-term">Week 1</div>
+              <div>
+                <h3>SKU・チョコレート内容・販売数の合意</h3>
+                <p>K10 / Silverの基準仕様、対象ギフト、10%OFFの按分、販売数量を確定します。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-term">Week 2</div>
+              <div>
+                <h3>販売ページ・チケットコード・利用条件を作成</h3>
+                <p>購入ページ、同梱カード、メール文面、FAQ、キャンセル条件を整えます。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-term">Week 3</div>
+              <div>
+                <h3>両社メルマガ・SNS・店頭カードを準備</h3>
+                <p>両社が同じ週に、それぞれの顧客へ別文面で告知できる状態にします。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-term">Week 4</div>
+              <div>
+                <h3>数量限定で販売開始</h3>
+                <p>4週間の販売テストを行い、販売数と予約転換を見て次回判断します。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="container">
+          <div>
+            <p class="section-kicker">Next Decision</p>
+            <h2>まず合意したいこと。</h2>
+            <p>
+              この企画は、両社がすでに持つ商品・顧客接点・鎌倉という文脈を組み合わせるため、初回テストまでの負荷を抑えられます。
+            </p>
+          </div>
+          <div class="decision-box">
+            <ul>
+              <li>K10 / Silverそれぞれの基準仕様</li>
+              <li>組み合わせるチョコレートギフト</li>
+              <li>10%OFFの価格表示と費用按分</li>
+              <li>初回販売数と販売開始日</li>
+              <li>チケット有効期限・キャンセル条件</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>企画書: 鎌倉アニバーサリーギフト / 鎌倉彫金工房 × MAISON CACAO</div>
+        <div>
+          参考: <a href="https://kamakura-chokin.com/course/silver/">鎌倉彫金工房 手作りペアリングコース</a> /
+          <a href="https://kamakura-chokin.com/course/anniversary">鎌倉彫金工房 アニバーサリーコース</a> /
+          <a href="https://onlineshop.maisoncacao.com/collections/gift">MAISON CACAO ギフト</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
