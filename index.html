@@ -6,7 +6,7 @@
     <title>鎌倉アニバーサリーギフト企画書 | 鎌倉彫金工房 × MAISON CACAO</title>
     <meta
       name="description"
-      content="鎌倉彫金工房のK10・Silverペアリング制作体験チケットとMAISON CACAOのチョコレートギフトを組み合わせる共同販売企画。"
+      content="MAISON CACAO店頭でチョコレートと紙の制作体験チケットを一緒に贈る、鎌倉彫金工房との共同販売企画。"
     >
     <style>
       /* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 */
@@ -35,6 +35,8 @@
         --color-white-line: rgba(255, 255, 255, 0.36);
         --color-white-text: rgba(255, 255, 255, 0.9);
         --color-dark-glass: rgba(36, 24, 21, 0.58);
+        --color-warning: #76513a;
+        --color-warning-soft: #f4e8dd;
         --font-display: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
         --font-body: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
         --radius-card: 8px;
@@ -632,6 +634,60 @@
         font-size: 1.02rem;
       }
 
+      .sales-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+        margin-top: var(--space-8);
+      }
+
+      .sales-card {
+        display: grid;
+        gap: var(--space-3);
+        min-width: 0;
+        border: 1px solid var(--color-line);
+        border-radius: var(--radius-card);
+        padding: var(--space-5);
+        background: var(--color-paper-strong);
+        box-shadow: 0 18px 42px var(--color-shadow-soft);
+      }
+
+      .sales-card.primary {
+        border-color: var(--color-gold);
+        background: var(--color-ivory);
+      }
+
+      .sales-card .icon-lg {
+        color: var(--color-jade);
+      }
+
+      .sales-card.primary .icon-lg {
+        color: var(--color-gold);
+      }
+
+      .sales-card strong {
+        font-size: 1.1rem;
+      }
+
+      .sales-card span {
+        color: var(--color-muted);
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .inventory-note {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        margin-top: var(--space-4);
+        border: 1px solid var(--color-warning);
+        border-radius: var(--radius-card);
+        padding: var(--space-4);
+        background: var(--color-warning-soft);
+        color: var(--color-warning);
+        font-weight: 800;
+      }
+
       .benefit-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -825,7 +881,8 @@
 
         .hero-board,
         .gift-points,
-        .dashboard {
+        .dashboard,
+        .sales-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -885,7 +942,8 @@
         .journey,
         .check-grid,
         .benefit-list,
-        .decision-icons {
+        .decision-icons,
+        .sales-grid {
           grid-template-columns: 1fr;
         }
 
@@ -983,7 +1041,7 @@
             鎌倉彫金工房 × MAISON CACAO
           </span>
           <h1>鎌倉アニバーサリーギフト</h1>
-          <p class="hero-lead">チョコレートとペアリング制作体験を、ひとつの記念日ギフトとして共同販売する企画。</p>
+          <p class="hero-lead">メゾンカカオ店頭で、チョコレートと紙の体験チケットを一緒に贈れる記念日ギフト。</p>
           <div class="hero-board" aria-label="企画の要点">
             <div class="hero-stat">
               <svg class="icon"><use href="#icon-ring"></use></svg>
@@ -997,8 +1055,8 @@
             </div>
             <div class="hero-stat">
               <svg class="icon"><use href="#icon-store"></use></svg>
-              <strong>両社EC</strong>
-              <span>メルマガ連動</span>
+              <strong>店頭＋EC</strong>
+              <span>主導線は店頭</span>
             </div>
           </div>
         </div>
@@ -1182,24 +1240,24 @@
               <p class="kicker">Flow</p>
               <h2>購入から来店までを見える化。</h2>
             </div>
-            <p class="lead">顧客リストは共有せず、販売元ごとに運用します。</p>
+            <p class="lead">主導線は店頭販売。EC販売は補助導線として扱います。</p>
           </div>
 
           <div class="journey">
             <article class="flow-card">
               <span class="step-no">1</span>
               <svg class="icon-lg"><use href="#icon-cart"></use></svg>
-              <strong>ECで購入</strong>
+              <strong>店頭/ECで購入</strong>
             </article>
             <article class="flow-card">
               <span class="step-no">2</span>
-              <svg class="icon-lg"><use href="#icon-chocolate"></use></svg>
-              <strong>チョコ配送</strong>
+              <svg class="icon-lg"><use href="#icon-gift"></use></svg>
+              <strong>紙チケット同梱</strong>
             </article>
             <article class="flow-card">
               <span class="step-no">3</span>
               <svg class="icon-lg"><use href="#icon-ticket"></use></svg>
-              <strong>コード発行</strong>
+              <strong>予約コード</strong>
             </article>
             <article class="flow-card">
               <span class="step-no">4</span>
@@ -1211,6 +1269,29 @@
               <svg class="icon-lg"><use href="#icon-ring"></use></svg>
               <strong>鎌倉で制作</strong>
             </article>
+          </div>
+
+          <div class="sales-grid" aria-label="販売チャネル">
+            <article class="sales-card primary">
+              <svg class="icon-lg"><use href="#icon-store"></use></svg>
+              <strong>MAISON CACAO 店頭</strong>
+              <span>チョコ + 紙チケット</span>
+            </article>
+            <article class="sales-card">
+              <svg class="icon-lg"><use href="#icon-cart"></use></svg>
+              <strong>MAISON CACAO EC</strong>
+              <span>配送・EC購入</span>
+            </article>
+            <article class="sales-card">
+              <svg class="icon-lg"><use href="#icon-cart"></use></svg>
+              <strong>鎌倉彫金工房 EC</strong>
+              <span>オンライン販売のみ</span>
+            </article>
+          </div>
+
+          <div class="inventory-note">
+            <svg class="icon"><use href="#icon-check"></use></svg>
+            鎌倉彫金工房の店頭ではチョコレートを販売しない
           </div>
         </div>
       </section>
