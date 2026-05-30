@@ -330,6 +330,119 @@
         font-size: 1.05rem;
       }
 
+      .audience-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: var(--space-6);
+        align-items: stretch;
+      }
+
+      .venn-card,
+      .insight-card {
+        min-width: 0;
+        border: 1px solid var(--color-line);
+        border-radius: var(--radius-card);
+        background: var(--color-paper-strong);
+        box-shadow: 0 18px 42px var(--color-shadow-soft);
+      }
+
+      .venn-card {
+        display: grid;
+        place-items: center;
+        padding: var(--space-6);
+        background: var(--color-ivory);
+      }
+
+      .venn {
+        position: relative;
+        width: min(100%, 28rem);
+        aspect-ratio: 1.36;
+      }
+
+      .venn-circle {
+        position: absolute;
+        top: 13%;
+        width: 56%;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        padding: var(--space-6);
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .venn-circle.left {
+        left: 0;
+        background: var(--color-gold-soft);
+        color: var(--color-cocoa);
+      }
+
+      .venn-circle.right {
+        right: 0;
+        background: var(--color-jade-soft);
+        color: var(--color-jade);
+      }
+
+      .venn-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 38%;
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        display: grid;
+        place-items: center;
+        border: 2px solid var(--color-paper-strong);
+        border-radius: 999px;
+        background: var(--color-cocoa);
+        color: var(--color-paper-strong);
+        text-align: center;
+        font-size: 0.96rem;
+        font-weight: 900;
+      }
+
+      .insight-card {
+        padding: var(--space-6);
+      }
+
+      .insight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+      }
+
+      .insight-chip {
+        display: grid;
+        gap: var(--space-2);
+        min-height: 8rem;
+        border: 1px solid var(--color-line);
+        border-radius: var(--radius-card);
+        padding: var(--space-4);
+        background: var(--color-paper);
+      }
+
+      .insight-chip .icon {
+        color: var(--color-gold);
+      }
+
+      .insight-chip strong {
+        font-size: 0.94rem;
+      }
+
+      .why-cross {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+        border-radius: var(--radius-card);
+        padding: var(--space-4);
+        background: var(--color-jade-soft);
+        color: var(--color-jade);
+        font-weight: 800;
+      }
+
       .concept-map {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -887,6 +1000,7 @@
         }
 
         .section-head,
+        .audience-panel,
         .gift-core,
         .closing .container {
           grid-template-columns: 1fr;
@@ -938,6 +1052,7 @@
 
         .hero-board,
         .gift-points,
+        .insight-grid,
         .dashboard,
         .journey,
         .check-grid,
@@ -965,11 +1080,35 @@
         }
 
         .brand-block,
+        .venn-card,
+        .insight-card,
         .gift-core,
         .sku-head,
         .sku-body,
         .benefit-panel {
           padding: var(--space-5);
+        }
+
+        .venn {
+          display: grid;
+          gap: var(--space-3);
+          aspect-ratio: auto;
+        }
+
+        .venn-circle,
+        .venn-center {
+          position: static;
+          width: 100%;
+          min-height: 5.8rem;
+          aspect-ratio: auto;
+          transform: none;
+          border-radius: var(--radius-card);
+          padding: var(--space-4);
+          font-size: 0.95rem;
+        }
+
+        .venn-center {
+          border: 0;
         }
 
         .bundle-row {
@@ -1041,12 +1180,12 @@
             鎌倉彫金工房 × MAISON CACAO
           </span>
           <h1>鎌倉アニバーサリーギフト</h1>
-          <p class="hero-lead">メゾンカカオ店頭で、チョコレートと紙の体験チケットを一緒に贈れる記念日ギフト。</p>
+          <p class="hero-lead">近い顧客層に、完全には重ならない認知を届ける。メゾンカカオ店頭で、チョコレートと紙の体験チケットを一緒に贈れる記念日ギフト。</p>
           <div class="hero-board" aria-label="企画の要点">
             <div class="hero-stat">
-              <svg class="icon"><use href="#icon-ring"></use></svg>
-              <strong>K10 / Silver</strong>
-              <span>2 SKUで開始</span>
+              <svg class="icon"><use href="#icon-gift"></use></svg>
+              <strong>近い顧客層</strong>
+              <span>鎌倉・記念日・上質</span>
             </div>
             <div class="hero-stat">
               <svg class="icon"><use href="#icon-chart"></use></svg>
@@ -1066,6 +1205,7 @@
         <div class="top-nav-inner">
           <div class="nav-brand">Proposal Board</div>
           <div class="nav-links">
+            <a href="#audience">相性</a>
             <a href="#concept">概要</a>
             <a href="#sku">商品</a>
             <a href="#flow">流れ</a>
@@ -1073,6 +1213,50 @@
           </div>
         </div>
       </nav>
+
+      <section id="audience" class="band">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Audience Fit</p>
+              <h2>似ている。でも同じではない。</h2>
+            </div>
+            <p class="lead">公開サイト上の見え方では、両社とも「鎌倉」「記念日」「上質な贈り物」に強い。一方で購入動機は違うため、相互認知に意味があります。</p>
+          </div>
+
+          <div class="audience-panel">
+            <article class="venn-card" aria-label="顧客属性の重なり">
+              <div class="venn">
+                <div class="venn-circle left">制作体験<br>カップル<br>記念日</div>
+                <div class="venn-circle right">チョコ<br>ギフト<br>自分用</div>
+                <div class="venn-center">鎌倉<br>上質<br>想い出</div>
+              </div>
+            </article>
+
+            <article class="insight-card">
+              <h3>共通する顧客文脈</h3>
+              <div class="insight-grid">
+                <div class="insight-chip">
+                  <svg class="icon"><use href="#icon-store"></use></svg>
+                  <strong>鎌倉に行く理由</strong>
+                </div>
+                <div class="insight-chip">
+                  <svg class="icon"><use href="#icon-gift"></use></svg>
+                  <strong>大切な人への贈り物</strong>
+                </div>
+                <div class="insight-chip">
+                  <svg class="icon"><use href="#icon-ring"></use></svg>
+                  <strong>素材・手仕事への納得感</strong>
+                </div>
+              </div>
+              <div class="why-cross">
+                <svg class="icon"><use href="#icon-chart"></use></svg>
+                重なりがあるから刺さり、ズレがあるから新しい認知が生まれる
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <section id="concept">
         <div class="container">
@@ -1434,6 +1618,7 @@
         <div>
           参考: <a href="https://kamakura-chokin.com/course/silver/">鎌倉彫金工房 手作りペアリングコース</a> /
           <a href="https://kamakura-chokin.com/course/anniversary">鎌倉彫金工房 アニバーサリーコース</a> /
+          <a href="https://onlineshop.maisoncacao.com/collections/for-new-customer">MAISON CACAO 初めてのお客様へ</a> /
           <a href="https://onlineshop.maisoncacao.com/collections/gift">MAISON CACAO ギフト</a>
         </div>
       </div>
